@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600&family=Quicksand:wght@400;500;700&display=swap');
+
+:root{
+    --primaryColor: #1e2f23;
+    --secondaryColor: #283618;
+    --pink: #EFD3CD;
+    --backgroundColor: #e8f1f2;
+    --btn-primary:#1d1e18;
+    --btn-secondary:#fff;
+}
