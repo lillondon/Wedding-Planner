@@ -4,6 +4,7 @@
   --primaryColor: #1e2f23;
   --secondaryColor: #283618;
   --pink: #f1b69b;
+  --white: #fff;
   --secondary-pink: #efd3cd;
   --backgroundColor: #e8f1f2;
   --btn-primary: #1d1e18;
@@ -69,6 +70,49 @@ svg {
   max-width: 100%;
   max-inline-size: 100%;
   max-block-size: 100%;
+}
+
+.primary-title {
+  font-family: "Qwigley";
+  font-size: 70px;
+  color: var(--white);
+}
+
+.shortDesc {
+  font-family: "El Messiri";
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.2em;
+  color: var(--secondary-pink);
+}
+
+.btn {
+  font-family: "Quicksand";
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: var(--primaryColor);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--white);
+  color: var(--secondaryColor);
+}
+
+.btn-secondary {
+  background-color: var(--pink);
+  color: var(--secondaryColor);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--pink);
 }
 
 .container {
@@ -139,7 +183,92 @@ header {
 }
 
 /*-------- HOME ---------*/
+.page-intro {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+}
 
+.home-image {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)),
+    url(./assets/images/mainImage.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-position-y: -50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-intro .intro-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--white);
+  margin-top: 60px;
+}
+
+.page-intro .intro-div img {
+  width: 145px;
+  height: 132px;
+}
+
+.page-intro .intro-div p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*-------- ABOUT ---------*/
+.about-image {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)),
+    url(./assets/images/tables.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-position-y: -120px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*-------- GALLERY ---------*/
+.gallery-image {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)),
+    url(./assets/images/car.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-position-y: -80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*-------- ACCOMMODATIONS ---------*/
+.accommodation-image {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)),
+    url(./assets/images/accommodationIntro.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-position-y: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*-------- PARTNERS ---------*/
+.partners-image {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)),
+    url(./assets/images/gift.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-position-y: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*-------- CONTACT  ---------*/
+.contact-image {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)),
+    url(./assets/images/form.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-position-y: -90px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /*-------- FOOTER ---------*/
 footer {
   background-color: var(--btn-primary);
