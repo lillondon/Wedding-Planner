@@ -9,7 +9,72 @@
   --btn-secondary: #fff;
 }
 
-/*Gallery Grid*/
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/* Gallery Grid
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -35,4 +100,4 @@
 }
 .div6 {
   grid-area: 4 / 5 / 6 / 7;
-}
+} */
