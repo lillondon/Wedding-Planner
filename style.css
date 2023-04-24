@@ -19,11 +19,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -93,12 +94,17 @@ svg {
   font-weight: 700;
   padding: 1em 1.5em;
   border-radius: 5px;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.btn:active {
+  transform: scale(0.92);
 }
 
 .btn-primary {
   background-color: var(--pink);
   color: var(--white);
-  transition: all 0.3s;
 }
 
 .btn-primary:hover {
@@ -221,7 +227,7 @@ header {
   }
 }
 
-/*-------- HOME ---------*/
+/*-------- DATA HOME ---------*/
 .page-intro {
   min-height: 60vh;
   display: flex;
@@ -339,6 +345,7 @@ header {
     grid-area: auto;
   }
 }
+
 /*-------- ACCOMMODATIONS ---------*/
 .accommodation-image {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)),
@@ -390,6 +397,155 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.contact {
+  display: flex;
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info,
+.contact-form {
+  padding: 1.2rem;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  border-radius: 0 5px 5px 0;
+  background: var(--secondary-pink);
+  width: 70%;
+  flex-shrink: 1;
+}
+
+.contact-info {
+  color: var(--white);
+  border-radius: 5px 0 0 5px;
+  background-color: var(--primaryColor);
+  min-width: 30%;
+  flex: 1 0 auto;
+}
+
+.contact-info h2 {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.contact-address {
+  margin-bottom: 32px;
+  padding-left: 28px;
+  background: url("../img/icons/local.svg") no-repeat 0px 2px;
+}
+
+.contact-address p {
+  margin-bottom: 8px;
+  color: var(--white-color);
+}
+
+.contact-ways a {
+  display: block;
+  max-width: max-content;
+  margin-bottom: 8px;
+  padding-left: 28px;
+  color: var(--white-color);
+}
+
+.contact-ways a:hover {
+  color: var(--pink);
+}
+
+.contact-ways a:nth-child(1),
+.contact-ways a:nth-child(2) {
+  background: url("assets/images/email.svg") no-repeat 0px 2px;
+}
+
+.contact-ways a:nth-child(3) {
+  margin-bottom: 60px;
+  background: url("assets/images/phone.svg") no-repeat 0px 2px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form .col-2 {
+  grid-column: span 2;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 4px;
+  font: 600 1rem/1.5 "Red Hat Display", sans-serif;
+  color: var(--title-color);
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  font: 400 1rem/1.5 "Red Hat Display", sans-serif;
+  border: 1px solid var(--white-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--white-color);
+  box-shadow: 0 0 0 2px var(--primaryColor);
+}
+
+.botao {
+  display: inline-block;
+  padding: 16px 32px;
+  background: #19430d;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-transform: uppercase;
+  font: 600 1.125rem/1.35 "Red Hat Display", sans-serif;
+  color: var(--white-color);
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  p.lead {
+    font-size: 1.3rem;
+  }
+
+  .contact.container {
+    max-width: 500px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-address {
+  transform: translateX(-20px);
+}
+
 /*-------- FOOTER ---------*/
 footer {
   background-color: var(--btn-primary);
