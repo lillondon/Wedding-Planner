@@ -275,6 +275,9 @@ header {
 }
 
 /*-------- ABOUT ---------*/
+#about-section{
+  padding-bottom: 50px;
+}
 .about-image {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)),
     url(./assets/images/tables.jpeg);
@@ -284,6 +287,64 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.about-content{
+  position: relative;
+  padding: 0 3em;
+}
+.about-content p{
+  padding-left: 0.5em;
+  padding-top:5em;
+}
+
+.clear{
+  clear: both;
+}
+
+.float-left{
+  float: left;
+}
+
+.float-right{
+  float: right;
+}
+
+#about-photo{
+  display: inline;
+  width: 250px;
+  height: 300px;
+  border-radius: 5px;
+  margin: 0.5em;
+}
+
+@media (max-width: 600px) {
+  #about-photo{
+    width: 170px;
+    height: 250px;
+  }
+  .float-left, .float-right{
+    float: none;
+  }
+}
+
+@media (max-width: 599px) {
+  #about-photo{
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .photo-div{
+   width: fit-content;
+   margin: 0 auto;
+  }
+
+  .about-content p{
+    padding-left: 0;
+    padding-top:1em;
+  }
+}
+
 
 /*-------- GALLERY ---------*/
 .gallery-image {
@@ -497,7 +558,7 @@ header {
 
 .form input[type="text"]:focus,
 .form input[type="email"]:focus,
-.form input[type="number"],
+.form input[type="number"]:focus,
 .form textarea:focus,
 #form-button:focus {
   outline: none;
